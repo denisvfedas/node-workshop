@@ -306,9 +306,12 @@ library.getIssPosition()
 });
 ```
 
-  * Here's another example of API, the Google Maps Geocoding API. We can pass it the name of a place, and it will return a set of coordinates for it
-  * Try the following URL in your browser: `https://maps.googleapis.com/maps/api/geocode/json?address=montreal`. You will get back a lot of data.
-  * We're interested in the path `results[0].geometry.location` which will give us an approximate latitude/longitude for the address we asked
+  * Here's another example of API, the Google Maps Geocoding API. We can pass it the name of a place, and it will return a set of 
+  * coordinates for it
+  * Try the following URL in your browser: `https://maps.googleapis.com/maps/api/geocode/json?address=montreal`. You will get 
+  * back a lot of data.
+  * We're interested in the path `results[0].geometry.location` which will give us an approximate latitude/longitude for the 
+  * address we asked
   * Let's see how we can make this into a JavaScript function:
   
 ```js
@@ -322,7 +325,8 @@ function getAddressCoordinates(address) {
 }
 ```
 
-  * Easy peasy! Now we have a function that returns the location of the ISS, and another one that returns the location of an address
+  * Easy peasy! Now we have a function that returns the location of the ISS, and another one that returns the location of an 
+  * address
   * Let's use the two functions together to find the distance between an address and the ISS:
   
 ```js

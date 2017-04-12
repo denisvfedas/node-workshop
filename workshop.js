@@ -49,11 +49,14 @@ function getCurrentTemperatureAtPosition(position) {
 }
 
 function getCurrentTemperature(address) {
-
+    return getCurrentTemperatureAtPosition(address);
 }
 
 function getDistanceFromIss(address) {
-
+    return Promise.all([getAddressPosition(address), getIssPosition()])
+    .then(function(results) {
+        return getDistance(results[0], results[1]);
+    });
 }
 
 exports.getIssPosition = getIssPosition;

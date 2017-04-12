@@ -191,11 +191,15 @@ connection.query('INSERT INTO expenses (expenseDate, expenseType, expenseAmountI
 
 # Making HTTP requests using NodeJS and `Promise`s
 
-  * In addition to allowing us to connect to an SQL server and send queries to it, NodeJS also allows us to connect to HTTP (web) servers and send HTTP requests to them
-  * Normally, we make HTTP requests by using a web browser, and the URLs we request will return HTML web pages. However, some web servers return pure, structured data instead of HTML
-  * You may have heard of the XML or JSON data formats. They are basically text formats like HTML, but they are used when we need to transfer data between different systems.
+  * In addition to allowing us to connect to an SQL server and send queries to it, NodeJS also allows us to connect to HTTP (web)
+  * servers and send HTTP requests to them
+  * Normally, we make HTTP requests by using a web browser, and the URLs we request will return HTML web pages. However, some web
+  * servers return pure, structured data instead of HTML
+  * You may have heard of the XML or JSON data formats. They are basically text formats like HTML, but they are used when we need
+  * to transfer data between different systems.
   * XML used to be the standard data exchange format, but in the last few years JSON has surpassed it as a lighter alternative.
-  * JSON is simply a text format that encodes data using JavaScript Object Notation -- the object-litteral notation you already know about, with a few extra rules:
+  * JSON is simply a text format that encodes data using JavaScript Object Notation -- the object-litteral notation you already
+  * know about, with a few extra rules:
     1. JSON does not support functions as values, only simple values like numbers, strings, booleans, arrays and objects.
     2. Every object key in JSON has to be double-quoted, even if JavaScript would allow you to write it without quotes
     3. Strings must be double-quoted. You don't have the choice to use single-quotes if you are writing JSON.
@@ -213,11 +217,16 @@ connection.query('INSERT INTO expenses (expenseDate, expenseType, expenseAmountI
 ```
 
   * This JSON document was obtained by making an HTTP request to `http://api.open-notify.org/iss-now.json`. Try it for yourself.
-  * We will learn more about the HTTP protocol next week. For now, at least know that some web servers will return other things than HTML, and we can use that to incorporate their data in our own programs.
-  * Here's one more example: open a new browser tab and go to `https://www.reddit.com/r/montreal.json` and look at the data. If it looks all piled up together in your browser, make sure to install the JSONView plugin, available for Chrome and Firefox.
-  * The data that you see on that last page is exactly the same data you would see if you went to the Montreal subreddit without the `.json`, but without the fluff of HTML and CSS. Only arrays of objects.
-  * Even though this data looks like a JavaScript object, remember that JSON is just a string of text that *represents* a JavaScript object. There is a JavaScript function called `JSON.parse` that can read that text and create an object out of it.
-  * Every major programming language other than JavaScript also has a function to read in the JSON text, and transform it in the data structures of the language.
+  * We will learn more about the HTTP protocol next week. For now, at least know that some web servers will return other things 
+  * than HTML, and we can use that to incorporate their data in our own programs.
+  * Here's one more example: open a new browser tab and go to `https://www.reddit.com/r/montreal.json` and look at the data.
+  * If it looks all piled up together in your browser, make sure to install the JSONView plugin, available for Chrome and Firefox.
+  * The data that you see on that last page is exactly the same data you would see if you went to the Montreal subreddit without 
+  * the `.json`, but without the fluff of HTML and CSS. Only arrays of objects.
+  * Even though this data looks like a JavaScript object, remember that JSON is just a string of text that *represents* a 
+  * JavaScript object. There is a JavaScript function called `JSON.parse` that can read that text and create an object out of it.
+  * Every major programming language other than JavaScript also has a function to read in the JSON text, and transform it in the 
+  * data structures of the language.
   * (For example in PHP there is a function called `json_decode` that can read a string of JSON and transform it to something called an "associative array", which is the PHP equivalent of JavaScript objects when used as dictionaries)
   * Let's look at an example of making an HTTP request using NodeJS. We will use the `request-promise` package from NPM to do this:
   

@@ -27,15 +27,22 @@
   4. Make sure your function only returns a `Promise` for the current temperature (a number) and nothing else
   
 ### `getCurrentTemperature`
-While it's useful to get the current temperature for a specific lat/lng, most often we want to provide the name of a place instead.
+While it's useful to get the current temperature for a specific lat/lng, most often we want to provide the name of a place 
+instead.
 
-You already created a function that can do address ==> position, and one that can do position ==> temperature. For this exercise, re-use these two functions to create one that goes directly from address ==> temperature.
+You already created a function that can do address ==> position, and one that can do position ==> temperature. For this exercise, 
+re-use these two functions to create one that goes directly from address ==> temperature.
 
 The code of this function should be very short, re-using two previously created functions.
 
 ### `getDistanceFromIss`
 Again here you should re-use two previously created functions, plus the `getDistance` function provided to you in `workshop.js`.
 
-One of the functions does address ==> position and the other simply does nothing ==> position. The `getDistance` function needs the two positions to compute the final value.
+One of the functions does address ==> position and the other simply does nothing ==> position. The `getDistance` function needs 
+the two positions to compute the final value.
 
 In this case, the two functions can be called in parallel. Make sure to use `Promise.all` to make it happen!
+
+
+
+

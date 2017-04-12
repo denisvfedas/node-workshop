@@ -21,7 +21,16 @@ function getIssPosition() {
 }
 
 function getAddressPosition(address) {
-
+    return request('https://maps.googleapis.com/maps/api/geocode/json?address= ' + address)
+    .then(function(responce) {
+        //Parse as JSON
+        var data = JSON.parse(responce);
+        //return an `Promise` for a lat/lng object
+        var coordinates = {};
+        coordinates.lat = data.results[0].geometry.location.lat;
+        coordinates.lng = data.results[0].geometry.location.lng;
+        return coordinates;
+    });
 }
 
 function getCurrentTemperatureAtPosition(position) {
